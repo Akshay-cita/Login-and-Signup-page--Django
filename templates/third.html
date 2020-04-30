@@ -1,0 +1,15 @@
+{%extends 'first.html'%}
+{%load static%}
+
+{%block content%}
+<div class="jumbotron">
+    <h2>Register here</h2>
+    <h3>Fill out the form:</h3>
+    <form enctype="multipart/form-data" method="post">
+      {%csrf_token%}
+      {{user_form.as_p}}
+      {{profile_form.as_p}}
+      <input type="submit" value="Register">
+    </form>
+</div>
+{%endblock%}
